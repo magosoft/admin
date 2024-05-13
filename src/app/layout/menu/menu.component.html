@@ -1,0 +1,16 @@
+<ul class="layout-menu">
+    @for (item of items; track $index) {
+    <ng-container>
+        @if(item.separator){
+        <li class="menu-separator"></li>
+        }@else {
+        <li app-menu-item [item]="item" [index]="$index" [root]="true"></li>
+        }
+    </ng-container>
+    }
+    <li>
+        <a href="https://www.primefaces.org/primeblocks-ng/#/">
+            <img src="assets/images/banner-primeblocks.png" alt="Prime Blocks" class="w-full mt-3" />
+        </a>
+    </li>
+</ul>
